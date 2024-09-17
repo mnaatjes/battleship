@@ -1,0 +1,231 @@
+/*---------------------------------------------------------------*/
+/* Game Console: Radar */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radar */
+/*--------------------------------*/
+.console__radar {
+    /*grid*/
+    grid-column: 2;
+    /*vars*/
+    --radar-bkrnd: #333;
+    --radar-scanner-color: #0ff;
+    --radar-scanner-color-alpha: rgba(0, 255, 255, 0.4);
+    --radar-border-size: 6px;
+    /*position*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*display*/
+    overflow: hidden;
+    /*background*/
+    background: radial-gradient(
+        circle,
+        rgba(51, 51, 51, 1.0) 0%,
+        rgba(51, 51, 51, 0.4) 100%
+    );
+    /*border*/
+    border-radius: 100%;
+    border: var(--radar-border-size) solid #505050;
+    /*text*/
+    /*shadow*/
+    box-shadow: 
+        /*inset scanner glow*/
+        inset 0 0 30px 10px var(--radar-scanner-color-alpha),
+        /*bevel shadow*/
+        2px 2px 6px 2px rgba(0, 0, 0, 0.8);
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.console__radar::after {
+    content: '';
+    /*vars*/
+    /*position*/
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*border*/
+    border-radius: 100%;
+    /*shadow*/
+    box-shadow: 
+        /*inset depth shadow*/
+        inset 2px 2px 6px 6px rgba(0, 0, 0, 0.8);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.console__radar:nth-child(1) {
+    /*grid*/
+    grid-row: 2;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.console__radar:nth-child(2) {
+    /*grid*/
+    grid-row: 3;
+    /*DEBUGGING*/
+}
+/*---------------------------------------------------------------*/
+/* Game Console: Radar - Scanner */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Scanner */
+/*--------------------------------*/
+.radar__scanner {
+    /*vars*/
+    /*position*/
+    z-index: 10;
+    position: absolute;
+    top: calc(var(--radar-border-size)/2);
+    left: calc(var(--radar-border-size)/2);
+    width: calc(50% - var(--radar-border-size)/2);
+    height: calc(50% - var(--radar-border-size)/2);
+    /*display*/
+    /*background*/
+    background: linear-gradient(
+        45deg,
+        transparent 50%,
+        var(--radar-scanner-color)
+    );
+    /*border*/
+    border-radius: 100% 0 0 0;
+    border-right: 1px solid var(--radar-scanner-color);
+    /*shadow*/
+    box-shadow: 
+        /*scanner leading edge*/
+        4px -4px 1px rgba(0, 0, 0, 0.4);
+    /*transition*/
+    /*transform*/
+    transform-origin: bottom right;
+    /*animations*/
+    animation-name: scan;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Scanner: Children */
+/*-------------------------------*/
+.console__radar:nth-child(2) .radar__scanner {animation-delay: -0.75s;}
+/*--------------------------------*/
+/* Animation: Scanner */
+/*--------------------------------*/
+@keyframes scan {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+/*---------------------------------------------------------------*/
+/* Game Console: Radar - Enemy, Player Grid */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Radar: Grid */
+/*--------------------------------*/
+.radar__grid {
+    /*vars-rectangle*/
+    --h: calc(100% - var(--radar-border-size)/2);
+    --a: calc(var(--h) * sin(45deg));
+    /*position*/
+    position: absolute;
+    top: calc(50% - (var(--a)/2));
+    left: calc(50% - (var(--a)/2));
+    width: var(--a);
+    height: var(--a);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Radar: Grid - Label */
+/*--------------------------------*/
+.radar__label {
+    /*vars-rectangle*/
+    --h: calc(100% - var(--radar-border-size)/2);
+    --a: calc(var(--h) * sin(45deg));
+    /*position*/
+    position: absolute;
+    top: calc((50% - (var(--a)/2)) - 30px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 30px;
+    /*text*/
+    color: var(--radar-scanner-color-alpha);
+    font-size: 16px;
+    text-align: center;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Radar: Grid - table */
+/*--------------------------------*/
+.radar__grid table {
+    /*position*/
+    width: 100%;
+    height: 100%;
+    /*display*/
+    border-collapse: collapse;
+    table-layout: fixed;
+    /*border*/
+    border: 1px solid var(--radar-scanner-color-alpha);
+    /*DEBUGGING*/
+}
+.radar__grid table tr td {
+    /*position*/
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    /*border*/
+    border: 1px solid var(--radar-scanner-color-alpha);
+    /*text*/
+    text-align: center;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.radar__grid table tr td i {
+    /*position*/
+    margin: 0;
+    padding: 0;
+    /*display*/
+    display: block;
+    /*text*/
+    color: var(--radar-scanner-color-alpha);
+    font-size: 16px;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.radar__grid table tr td img {
+    /*position*/
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    /*display*/
+    display: block;
+    object-fit: contain;
+    opacity: 0.75;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

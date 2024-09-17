@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------*/
+/* Selector Console: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Board: Select and Game */
+/*--------------------------------*/
+.console__board--select,
+.console__board--game {
+    /*grid*/
+    grid-column: 1;
+    grid-row:  2 / span 3;
+    /*position*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border*/
+    border-radius: var(--console-panel-radius);
+    /*shadow*/
+    box-shadow: var(--console-panel-shadow);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Board: Table */
+/*--------------------------------*/

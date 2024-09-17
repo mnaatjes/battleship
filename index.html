@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <head>
+        <title>Battleship</title>
+        <script src="../javascript_functions.js" type="text/Javascript"></script>
+    </head>
+    <body>
+        <div id="data" class="data" data-ship-active="" data-plotted-ships="[]" data-plotted-pos="[]" data-orientation="true"></div>
+        <div class="flex">
+            <form id="selection" action="php/form.php" method="POST">
+            <div class="console--select">
+                <!--Console Header Start-->
+                <div class="console__header">
+                    <div class="console__header__logo">
+                        Battleship
+                        <img src="assets/icons/battleship_icon.png" alt="">
+                    </div>
+                    <!--Selection Settings Start-->
+                    <div class="console__header__dial">
+                        <div id="label-horizontal" data-state="true" class="label__dial--left">Horizontal</div>
+                        <div id="label-vertical" data-state="false" class="label__dial--right">Vertical</div>
+                        <div id="dial" data-select="true" class="radio__dial" onclick="selectOrientation(this)"></div>
+                    </div>
+                    <!--Selection Settings End-->
+                </div>
+                <!--Console Header End-->
+                <!--Console Submit Housing Start-->
+                <div class="console__form--submit">
+                    <div class="label--deploy">Deploy Fleet</div>
+                    <div class="console__form--owner">
+                        <input type="text" name="owner" placeholder="Enter Your Name">
+                    </div>
+                    <button class="btn--deploy" type="submit" onclick="formValidation(this)"></button>
+                    <!--Hidden Input Elements Start-->
+                    <input id="fleet_obj" type="text" name="fleet_obj" value="" style="display:none;">
+                    <input id="enemy_obj" type="text" name="enemy_obj" value="" style="display:none;">
+                    <!--Hidden Input Elements End-->
+                </div>
+                <!--Console Submit Housing End-->
+                <!--Selection Board Start-->
+                <div id="board_select" class="console__board--select"></div>
+                <!--Selection Board End-->
+                <!--Switchboard Start-->
+                <div id="switchboard" class="console__switchboard">
+                    <div class="switchboard__row">
+                        <label data-select="none" class="label--rocker" for="carrier">Carrier</label>
+                        <div class="btn--rocker__wrapper">
+                            <div id="carrier" data-select="false" class="btn--rocker" onclick="selectShipLabel(this)"></div>
+                        </div>
+                    </div>
+                    <div class="switchboard__row">
+                        <label data-select="none" class="label--rocker" for="battleship">Battleship</label>
+                        <div class="btn--rocker__wrapper">
+                            <div id="battleship" data-select="false" class="btn--rocker" onclick="selectShipLabel(this)"></div>
+                        </div>
+                    </div>
+                    <div class="switchboard__row">
+                        <label data-select="none" class="label--rocker" for="submarine">Submarine</label>
+                        <div class="btn--rocker__wrapper">
+                            <div id="submarine" data-select="false" class="btn--rocker" onclick="selectShipLabel(this)"></div>
+                        </div>
+                    </div>
+                    <div class="switchboard__row">
+                        <label data-select="none" class="label--rocker" for="destroyer">Destroyer</label>
+                        <div class="btn--rocker__wrapper">
+                            <div id="destroyer" data-select="false" class="btn--rocker" onclick="selectShipLabel(this)"></div>
+                        </div>
+                    </div>
+                    <div class="switchboard__row">
+                        <label data-select="none" class="label--rocker" for="cruiser">Cruiser</label>
+                        <div class="btn--rocker__wrapper">
+                            <div id="cruiser" data-select="false" class="btn--rocker" onclick="selectShipLabel(this)"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Switchboard End-->
+                <!--Screen Start-->
+                <div class="console__screen__housing--select">
+                    <div id="screen" class="console__screen">
+                        Apple
+                    </div>
+                </div>
+                <!--Screen End-->
+            </div>
+            </form>
+        </div>
+    </body>
+    <!--<script src="scripts/objects/obj_fleet_default.js" type="text/Javascript"></script>-->
+    <script src="scripts/functions/functions_main.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_selection.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_board.js" type="text/Javascript"></script>
+    <script src="scripts/functions/function_event_selection.js" type="text/Javascript"></script>    
+    <script src="scripts/onload_selection.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_selection_events.js" type="text/Javascript"></script>
+    <script src="scripts/objects/obj_select.js" type="text/Javascript"></script>
+    <script src="scripts/implementation/implementation_selection.js" type="text/Javascript"></script>
+</html>

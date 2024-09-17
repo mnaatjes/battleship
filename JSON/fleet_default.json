@@ -1,0 +1,8 @@
+{
+    "player_fleet":[
+    ["submarine", {"indexes":[],"coords":[],"size":3,"sunk":false}],
+    ["battleship", {"indexes":[],"coords":[],"size":4,"sunk":false}],
+    ["carrier", {"indexes":[],"coords":[],"size":5,"sunk":false}],
+    ["destroyer", {"indexes":[],"coords":[],"size":3,"sunk":false}],
+    ["cruiser", {"indexes":[],"coords":[],"size":2,"sunk":false}]
+]}

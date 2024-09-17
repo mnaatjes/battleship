@@ -1,0 +1,196 @@
+/*---------------------------------------------------------------*/
+/* Screen: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Housing */
+/*--------------------------------*/
+.console__screen__housing--select,
+.console__screen__housing--game {
+    /*vars*/
+    --screen-size: 90%;
+    /*position*/
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/*--------------------------------*/
+/* Housing */
+/*--------------------------------*/
+.console__screen__housing--select {
+    /*grid*/
+/*
+    grid-column: 2;
+    grid-row: 3;*/
+}
+/*--------------------------------*/
+/* Housing */
+/*--------------------------------*/
+.console__screen__housing--select,
+.console__screen__housing--game {
+    /*grid*/
+    grid-column: 2;
+    grid-row: 1;
+    /*position*/
+    width: 90%;
+    margin-left: 5%;
+}
+/*--------------------------------*/
+/* Housing */
+/*--------------------------------*/
+.console__screen__housing--select::before,
+.console__screen__housing--game::before {
+    content: '';
+    /*vars*/
+    /*position*/
+    z-index: inherit;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    /*display*/
+    border-radius: 50% / 10%;
+    /*background*/
+    background: #999;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Screen */
+/*--------------------------------*/
+.console__screen {
+    /*vars*/
+    /*position*/
+    z-index: 3;
+    position: relative;
+    padding: 25px;
+    width: calc(var(--screen-size) - 10px);
+    height: calc(var(--screen-size) - 10px);
+    /*display*/
+    overflow: hidden;
+    border-radius: 50% / 10%;
+    /*background*/
+    background: rgb(71, 71, 71);
+    /*text*/
+    color: rgb(0, 190, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    /*shadow*/
+    box-shadow: 
+        /*outline*/
+        0px 0px 0px 2px rgba(0, 0, 0, 0.9),
+        /*bevel*/
+        0px 0px 2px 6px rgba(0, 0, 0, 0.4),
+        /*gradient*/
+        0px 0px 8px 12px rgba(0, 0, 0, 0.6);
+    /*transform*/
+    filter: brightness(2.0) opacity(1.0);
+    /*animation*/
+    animation-name: screen--crt;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    /*DEBUGGING*/
+}
+@keyframes screen--crt {
+    0% {
+        /*text*/
+        text-shadow: 
+            /*vertical*/
+            2px 0px 4px rgba(31, 255, 50, 0.4), -2px 0px 4px rgba(31, 255, 50, 0.4),
+            /*horizontal*/
+            0px 2px 4px rgba(29, 141, 66, 0.0), 0px -2px 4px rgba(29, 141, 66, 0.0),
+            /*offset*/
+            2px 2px 4px rgba(0, 0, 0, 0.6);
+        /*flicker*/
+        filter: brightness(1.95) opacity(1.0);
+    }
+    50% {
+        /*text*/
+        text-shadow: 
+            /*vertical*/
+            2px 0px 4px rgba(31, 255, 50, 0.0), -2px 0px 4px rgba(31, 255, 50, 0.0),
+            /*horizontal*/
+            0px 2px 4px rgba(29, 141, 66, 0.4), 0px -2px 4px rgba(29, 141, 66, 0.4),
+            /*offset*/
+            2px 2px 4px rgba(0, 0, 0, 0.5);
+        /*flicker*/
+        filter: brightness(1.90) opacity(1.0);
+    }
+    100% {
+        /*text*/
+        text-shadow: 
+            /*vertical*/
+            2px 0px 4px rgba(31, 255, 50, 0.4), -2px 0px 4px rgba(31, 255, 50, 0.4),
+            /*horizontal*/
+            0px 2px 4px rgba(29, 141, 66, 0.0), 0px -2px 4px rgba(29, 141, 66, 0.0),
+            /*offset*/
+            2px 2px 4px rgba(0, 0, 0, 0.6);
+        /*flicker*/
+        filter: brightness(1.95) opacity(1.0);
+    }
+}
+/*--------------------------------*/
+/* Screen: Before */
+/*--------------------------------*/
+.console__screen::before {
+    content: '';
+    /*vars*/
+    /*position*/
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /*display*/
+    border-radius: 50% / 10%;
+    /*background*/
+    background: 
+    linear-gradient(
+        rgba(18, 16, 16, 0.0) 50%,
+        rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06)
+    );
+    background-size: 100% 2px, 3px 100%;
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Screen: After */
+/*--------------------------------*/
+.console__screen::after {
+    content: '';
+    /*vars*/
+    /*position*/
+    z-index: 4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /*display*/
+    border-radius: 50% / 10%;
+    /*background*/
+    background: rgba(0, 0, 0, 0.4);
+    /*shadow*/
+    box-shadow:
+        /*tv round light*/
+        inset 0px 0px 10px 8px rgba(0, 0, 0, 0.9),
+        /*tv round light*/
+        inset 0px 0px 12px 10px rgba(255, 255, 255, 0.4),
+        /*tv edge:*/
+        inset 0px 0px 40px 40px rgba(0, 0, 0, 0.2);
+    /*DEBUGGING*/
+}

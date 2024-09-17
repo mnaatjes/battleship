@@ -1,0 +1,48 @@
+/*---------------------------------------------------------------*/
+/* Console: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Console: Select, Game */
+/*--------------------------------*/
+.console--select,
+.console--game {
+    /*vars*/
+    --console-gap: 10px;
+    --console-panel-radius: 10px;
+    --console-panel-shadow:         
+        /*inset panel*/
+            inset 2px 2px 6px 4px rgba(0, 0, 0, 0.3),
+            inset -1px -1px 4px 0px rgba(0, 0, 0, 0.3);
+    /*position*/
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    width: calc(922px + (var(--console-gap)*1));
+    height: calc(822px + (var(--console-gap)*3));
+    /*display*/
+    display: grid;
+    grid-gap: var(--console-gap);
+    grid-template-columns: 600px 300px;
+    grid-template-rows: 200px 300px 300px;
+    /*background*/
+    background: #999;
+    /*border*/
+    border-radius: 12px;
+    /*text*/
+    /*shadow*/
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.8);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

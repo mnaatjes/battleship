@@ -1,0 +1,97 @@
+/*---------------------------------------------------------------*/
+/* Label: Rocker */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label--rocker {
+    /*vars*/
+    /*position*/
+    position: relative;
+    padding: 5px 10px;
+    width: 150px;
+    height: var(--switch-height);
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background*/
+    background: white;
+    /*border*/
+    border-radius: 12px;
+    border: 6px solid #333;
+    /*text*/
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    /*shadow*/
+    box-shadow: 
+        /*inside fill*/
+        inset 1px 1px 4px 2px rgba(0, 0, 0, 0.7),
+        2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    /*transition*/
+    /*transform*/
+    filter: brightness(1.05);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label--rocker[data-select="true"]::before {
+    content: '';
+    /*vars*/
+    /*position*/
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    /*display*/
+    /*background*/
+    background: rgba(21, 255, 0, 0.4);
+    /*border*/
+    border-radius: 12px;
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+    box-shadow: 0 0 12px 6px rgba(21, 255, 0, 0.4);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label--rocker[data-select="false"]::before {
+    content: '';
+    /*vars*/
+    /*position*/
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    /*display*/
+    /*background*/
+    background: rgba(255, 0, 0, 0.4);
+    /*border*/
+    border-radius: 12px;
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+    box-shadow: 0 0 12px 12px rgba(255, 0, 0, 0.4);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

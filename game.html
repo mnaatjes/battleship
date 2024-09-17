@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <head>
+        <title>Battleship: Game</title>
+        <script src="../javascript_functions.js" type="text/Javascript"></script>
+    </head>
+    <body>
+        <div class="flex">
+            <!--Console Start-->
+            <div class="console--game">
+                <!--Console Header Start-->
+                <div class="console__header">
+                    <!--Logo Start-->
+                    <div class="console__header__logo">
+                        Battleship
+                        <img src="assets/icons/battleship_icon.png" alt="">
+                    </div>
+                    <!--Logo End-->
+                    <!--Reset Button Start-->
+                    <div class="console__header__reset">
+                        <div class="label--reset">Reset</div>
+                        <a class="btn--reset" href="http://localhost/css_sandbox/battleship/"></a>
+                    </div>
+                    <!--Reset Button End-->
+                </div>
+                <!--Radar 1 Start-->
+                <div class="console__radar">
+                    <div class="radar__scanner"></div>
+                    <div class="radar__label"></div>
+                    <div id="enemy_radar" class="radar__grid">
+                    </div>
+                </div>
+                <!--Radar 1 End-->
+                <!--Radar 2 Start-->
+                <div class="console__radar">
+                    <div class="radar__scanner"></div>
+                    <div class="radar__label"></div>
+                    <div id="player_radar" class="radar__grid">
+                    </div>
+                </div>
+                <!--Radar 2 End-->
+                <!--Screen Start-->
+                <div class="console__screen__housing--game">
+                    <div id="screen" class="console__screen">
+                        Apple
+                    </div>
+                </div>
+                <!--Screen End-->
+                <div id="player_board" class="console__board--game"></div>
+            </div>
+            <!--Console End-->
+        </div>
+    </body>
+    <script src="scripts/objects/obj_enemy_fleet.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_main.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_board.js" type="text/Javascript"></script>
+    <script src="scripts/functions/functions_game.js" type="text/Javascript"></script>
+    <script src="scripts/onload_game.js" type="text/Javascript"></script>
+    <script src="scripts/implementation/implementation_game.js" type="text/Javascript"></script>
+</html>

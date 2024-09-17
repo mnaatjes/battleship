@@ -1,0 +1,79 @@
+/*---------------------------------------------------------------*/
+/* Selector Input */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Input[text] */
+/*--------------------------------*/
+input[type="text"] {
+    /*reset*/
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border-style: solid;
+    background: none;
+    color: black;
+    font-family: var(--ui-font-family);
+    /*grid*/
+    /*vars*/
+    /*position*/
+    padding: 10px;
+    /*display*/
+    /*background*/
+    background: rgba(255, 255, 255, 0.4);
+    /*border*/
+    border-radius: 10px;
+    border: 6px solid #585858;
+    /*text*/
+    font-size: 16px;
+    /*transition*/
+    transition: var(--ui-transition);
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Input[text]:focus */
+/*--------------------------------*/
+input[type="text"]:focus {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    background: rgba(255, 255, 255, 0.8);
+    /*border*/
+    /*text*/
+    color: #333;
+    /*shadow*/
+    box-shadow: 
+        /*inside fill*/
+        inset 1px 1px 4px 2px rgba(0, 0, 0, 0.8),
+        2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+input[type="text"]::placeholder {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+input[type="text"]:focus::placeholder {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.0);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*grid*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

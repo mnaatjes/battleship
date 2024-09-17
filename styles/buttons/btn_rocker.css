@@ -1,0 +1,121 @@
+/*---------------------------------------------------------------*/
+/* Button: Rocker */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker__wrapper {
+    /*vars*/
+    --rocket-radius: 12px;
+    /*position*/
+    padding: 5px 10px;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background*/
+    background-color: #333;
+    /*border*/
+    border-radius: var(--rocket-radius);
+    /*shadow*/
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker {
+    /*vars*/
+    /*position*/
+    position: relative;
+    width: calc(var(--switch-width) - 20px);
+    height: calc(var(--switch-height) - 10px);
+    /*display*/
+    /*background*/
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.3) 48%,
+        rgba(255, 255, 255, 0.0) 50%,
+        rgba(255, 255, 255, 0.1) 52%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    /*border*/
+    border-radius: var(--rocket-radius);
+    /*shadow*/
+    box-shadow: 
+        /*left bevel*/
+        -5px 0px 0px 0px rgba(255, 255, 255, 0.7);
+    /*transition*/
+    transition: 0.2s all ease-out;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker:active,
+.btn--rocker[data-select="true"] {
+    /*background*/
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.1) 48%,
+        rgba(255, 255, 255, 0.0) 50%,
+        rgba(255, 255, 255, 0.3) 52%,
+        rgba(255, 255, 255, 0.5) 100%
+    );
+    /*shadow*/
+    box-shadow: 
+        /*left bevel*/
+        5px 0px 0px 0px rgba(255, 255, 255, 0.7);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker::before,
+.btn--rocker::after {
+    /*position*/
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text*/
+    font-size: 20px;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker::before {
+    content: '-';
+    /*position*/
+    left: 0;
+    /*text*/
+    color: rgba(255, 255, 255, 1.0);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.btn--rocker::after {
+    content: 'o';
+    /*position*/
+    right: 0;
+    /*text*/
+    color: rgba(255, 255, 255, 0.8);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

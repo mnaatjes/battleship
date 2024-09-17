@@ -1,0 +1,11 @@
+{
+    "player_name": "Computer",
+    "player_type": false,
+    "player_fleet": [
+        ["submarine", {"indexes":[1,2,3],"coords":["A2","A3","A4"],"size":3,"sunk":false}],
+        ["battleship", {"indexes":[40,41,42,43],"coords":["E1","E2","E3","E4"],"size":4,"sunk":false}],
+        ["carrier", {"indexes":[20,21,22,23,24],"coords":["C1","C2","C3","C4","C5"],"size":5,"sunk":false}],
+        ["destroyer", {"indexes":[99,98,97],"coords":["J10","J9","J8"],"size":3,"sunk":false}],
+        ["cruiser", {"indexes":[70,71],"coords":["H1","H2"],"size":2,"sunk":false}]
+    ]
+}

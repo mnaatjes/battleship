@@ -1,0 +1,21 @@
+/*---------------------------------------------------------------*/
+/* Label: Reset */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Label--Reset */
+/*--------------------------------*/
+.label--reset {
+    /*position*/
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding-top: 20px;
+    /*text*/
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    /*DEBUGGING*/
+}

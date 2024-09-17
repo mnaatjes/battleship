@@ -1,0 +1,203 @@
+/*---------------------------------------------------------------*/
+/* Template: Main */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Imports: UI */
+/*--------------------------------*/
+@import url('ui/ui_radar.css');
+@import url('ui/ui_screen.css');
+@import url('ui/ui_console.css');
+@import url('ui/ui_board.css');
+@import url('ui/ui_switchboard_selection.css');
+@import url('ui/ui_settings_selection.css');
+@import url('ui/ui_form_selection.css');
+/*--------------------------------*/
+/* Imports: Buttons and Inputs */
+/*--------------------------------*/
+@import url('buttons/btn_pos.css');
+@import url('buttons/btn_game.css');
+@import url('buttons/btn_rocker.css');
+@import url('buttons/btn_dial.css');
+@import url('buttons/btn_deploy.css');
+/*--------------------------------*/
+/*--------------------------------*/
+/* Imports: Labels */
+/*--------------------------------*/
+@import url('tags/label_rocker.css');
+@import url('tags/label_dial.css');
+@import url('tags/label_deploy.css');
+@import url('tags/label_reset.css');
+/*--------------------------------*/
+/* Imports: Inputs */
+/*--------------------------------*/
+@import url('input/input_text.css');
+/*--------------------------------*/
+/* Root */
+/*--------------------------------*/ 
+:root {
+    /*DEBUGGING*/
+    --debug-border: 1px solid red;
+    --debug-bkrnd: rgba(255, 0, 0, 0.4);
+
+    /*UI*/
+    --ui-font-family: Arial, Helvetica, sans-serif;
+    --ui-padding: 10px;
+    --ui-transition: 0.25s all ease-in-out;
+    --ui-border-radius: 4px;
+}
+/*--------------------------------*/
+/* Overall Data */
+/*--------------------------------*/        
+* {
+    font-family: var(--ui-font-family);
+    margin: 0;
+    padding: 0;
+}
+/*--------------------------------*/
+/* Overall Data */
+/*--------------------------------*/
+body {
+    background-image: url('../assets/battleship_wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*--------------------------------*/
+/* Grid Container */
+/*--------------------------------*/        
+.grid {
+    /*vars*/
+    /*position*/
+    /*display*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Grid Item */
+/*--------------------------------*/
+.grid__item {
+    /*grid*/
+    grid-column: 1;
+    grid-row: 1;
+    /*vars*/
+    /*position*/
+    padding: var(--ui-padding);
+    /*display*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+    border: var(--debug-border);
+}
+/*--------------------------------*/
+/* Flex Container */
+/*--------------------------------*/
+.flex {
+    /*position*/
+    width: 100vw;
+    height: 100vh;
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*DEBUGGING*/
+    /*border: var(--debug-border);*/
+}
+/*--------------------------------*/
+/* Flex Item */
+/*--------------------------------*/
+.flex__item {
+    /*flex*/
+    flex: 1;
+    /*position*/
+    padding: var(--ui-padding);
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*backround*/
+    background-color: var(--debug-bkrnd);
+    /*DEBUGGING*/
+    border: var(--debug-border);
+}
+/*--------------------------------*/
+/* Item */
+/*--------------------------------*/
+.item {
+    /*position*/
+    padding: var(--ui-padding);
+    /*display*/
+    display: block;
+    /*backround*/
+    background-color: var(--debug-bkrnd);
+    /*DEBUGGING*/
+    border: var(--debug-border);
+}
+/*--------------------------------*/
+/* Row */
+/*--------------------------------*/
+.row {
+    /*display*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    /*DEBUGGING*/
+    border: var(--debug-border);
+}
+/*---------------------------------------------------------------*/
+/* Main: Animation-Class */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Animation-Class: Prefix */
+/*--------------------------------*/
+[data-animation],
+div[class*="animation"],
+img[class*="animation"] {
+    /*vars-animations main*/
+    animation-name: var(--animation-name, none);
+    animation-duration: var(--animation-duration, 1.0s);
+    animation-timing-function: var(--animation-timing-function, cubic-bezier(0.175, 0.885, 0.32, 1.275));
+    animation-delay: var(--animation-delay, 0.0s);
+    animation-iteration-count: var(--animation-iteration-count, 1);
+    animation-fill-mode: var(--animation-fill-mode, forwards);
+    animation-play-state: var(--animation-play-state, paused);
+}
+.paused { --animation-play-state: paused;}
+.running { --animation-play-state: running;}
+/*---------------------------------------------------------------*/
+/* Template: */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Data Tag */
+/*--------------------------------*/
+.data {
+    display: none;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+    /*vars*/
+    /*position*/
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/

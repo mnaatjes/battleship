@@ -1,0 +1,108 @@
+/*---------------------------------------------------------------*/
+/* Selector Console: Settings */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Console Header */
+/*--------------------------------*/
+.console__header {
+    /*grid*/
+    grid-column: 1;
+    grid-row: 1;
+    /*position*/
+    width: 100%;
+    /*display*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*background*/
+    background: #333;
+    /*border*/
+    border-radius: var(--console-panel-radius);
+    /*shadow*/
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Header: Logo */
+/*--------------------------------*/
+.console__header__logo {
+    /*position*/
+    z-index: inherit;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /*display*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background*/
+    background: rgba(255, 0, 0, 0.9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /*border*/
+    border-radius: 10px;
+    /*text*/
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 32px rgba(255, 0, 0, 0.8);
+    /*animation*/
+    animation-name: header__logo--pulse;
+    animation-duration: 1.95s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /*DEBUGGING*/
+}
+.console__header__logo img {
+    width: 200px;
+    display: block;
+    object-fit: contain;
+    filter: contrast(0%);
+}
+
+@keyframes header__logo--pulse {
+    0% {text-shadow: 0px 0px 32px rgba(255, 0, 0, 0.8);}
+    50% {text-shadow: 0px 0px 2px rgba(255, 0, 0, 0.8);}
+    100% {text-shadow: 0px 0px 32px rgba(255, 0, 0, 0.8);}
+}
+
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.console__header__dial {
+    /*position*/
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /*display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*DEBUGGING*/
+    /*border: 1px solid red;*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.console__header__reset {
+    /*position*/
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /*display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}

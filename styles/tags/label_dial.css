@@ -1,0 +1,245 @@
+/*---------------------------------------------------------------*/
+/* Label: Dial */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Dial Label */
+/*--------------------------------*/
+.label__dial--left,
+.label__dial--right {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    /*display*/
+    /*background*/
+    background: #333;
+    /*border*/
+    /*text*/
+    color: white;
+    font-size: 16px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+    /*transition*/
+    transition: var(--ui-transition);
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    left: 0;
+    /*display*/
+    /*background*/
+    /*border*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /*text*/
+    text-align: left;
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--right {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    right: 0;
+    /*display*/
+    /*background*/
+    /*border*/
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*text*/
+    text-align: right;
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*---------------------------------------------------------------*/
+/* Label: Dial - Light */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left::before,
+.label__dial--right::before {
+    content: '';
+    /*grid*/
+    /*vars*/
+    /*position*/
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    /*display*/
+    /*background*/
+    background: rgba(255, 255, 255, 0.9);
+    /*border*/
+    border-radius: 100%;
+    border: 5px solid #424242;
+    /*text*/
+    /*shadow*/
+    box-shadow:
+        /*inset depth*/
+        inset 2px 2px 4px 3px rgba(0, 0, 0, 0.6), 
+        /*bevel*/
+        3px 3px 4px 0px rgba(0, 0, 0, 0.8);
+    /*transition*/
+    transition: var(--ui-transition);
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left::before {
+    left: 10px;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--right::before {
+    right: 10px;
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left[data-state="false"]::before {
+    /*background*/
+    background: rgba(255, 255, 255, 0.9);
+    /*shadow*/
+    box-shadow:
+        /*inset depth*/
+        inset 2px 2px 4px 3px rgba(0, 0, 0, 0.6), 
+        /*bevel*/
+        3px 3px 4px 0px rgba(0, 0, 0, 0.8),
+        /*light*/
+        0px 0px 12px 4px rgba(255, 0, 0, 0.0);
+    /*transform*/
+    filter: brightness(1.0);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left[data-state="true"]::before {
+    /*background*/
+    background: rgba(255, 0, 0, 0.9);
+    /*shadow*/
+    box-shadow:
+        /*inset depth*/
+        inset 2px 2px 4px 3px rgba(0, 0, 0, 0.6), 
+        /*bevel*/
+        3px 3px 4px 0px rgba(0, 0, 0, 0.8),
+        /*light*/
+        0px 0px 12px 4px rgba(255, 0, 0, 0.6);
+    /*transform*/
+    filter: brightness(1.50);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--right[data-state="false"]::before {
+    /*background*/
+    background: rgba(255, 255, 255, 0.9);
+    /*shadow*/
+    box-shadow:
+        /*inset depth*/
+        inset 2px 2px 4px 3px rgba(0, 0, 0, 0.6), 
+        /*bevel*/
+        3px 3px 4px 0px rgba(0, 0, 0, 0.8),
+        /*light*/
+        0px 0px 12px 4px rgba(255, 0, 0, 0.0);
+    /*transform*/
+    filter: brightness(1.0);
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--right[data-state="true"]::before {
+    /*background*/
+    background: rgba(255, 0, 0, 0.9);
+    /*shadow*/
+    box-shadow:
+        /*inset depth*/
+        inset 2px 2px 4px 3px rgba(0, 0, 0, 0.6), 
+        /*bevel*/
+        3px 3px 4px 0px rgba(0, 0, 0, 0.8),
+        /*light*/
+        0px 0px 12px 4px rgba(255, 0, 0, 0.6);
+    /*transform*/
+    filter: brightness(1.50);
+}
+/*---------------------------------------------------------------*/
+/* Label: Dial - Line */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left::after,
+.label__dial--right::after {
+    content: '';
+    /*grid*/
+    /*vars*/
+    --line-inset: 80px;
+    /*position*/
+    position: absolute;
+    top: 40px;
+    width: 1px;
+    height: 35px;
+    /*display*/
+    /*background*/
+    /*border*/
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--left::after {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    left: var(--line-inset);
+    /*display*/
+    /*background*/
+    /*border*/
+    border-left: 2px solid white;
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    transform: rotateZ(-45deg);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.label__dial--right::after {
+    /*grid*/
+    /*vars*/
+    /*position*/
+    right: var(--line-inset);
+    /*display*/
+    /*background*/
+    /*border*/
+    border-right: 2px solid white;
+    /*text*/
+    /*shadow*/
+    /*transition*/
+    /*transform*/
+    transform: rotateZ(45deg);
+    /*DEBUGGING*/
+}

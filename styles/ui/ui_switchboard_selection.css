@@ -1,0 +1,41 @@
+/*---------------------------------------------------------------*/
+/* Selector Console: Switchboard */
+/*---------------------------------------------------------------*/
+/*--------------------------------*/
+/* Switchboard */
+/*--------------------------------*/
+.console__switchboard {
+    /*vars*/
+    --switch-width: 100px;
+    --switch-height: 45px;
+    /*grid*/
+    grid-column: 2;
+    grid-row: 2;
+    /*display*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*position*/
+    width: 100%;
+    /*border*/
+    border-radius: var(--console-panel-radius);
+    /*shadow*/
+    box-shadow: var(--console-panel-shadow);
+    /*DEBUGGING*/
+}
+/*--------------------------------*/
+/* Template */
+/*--------------------------------*/
+.switchboard__row {
+    /*flex*/
+    flex: 1;
+    /*position*/
+    width: 100%;
+    /*display*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
